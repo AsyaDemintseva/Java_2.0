@@ -13,7 +13,7 @@ public class Base {
         System.out.print("Введите номер операции: ");
         int type = inp.nextInt();
 
-        if ((type < 0)||(type > 4)) {
+        if ((type < 1)||(type > 4)) {
             System.out.println("Не верный номер операции. Попробуйте ещё раз.");
             System.exit(0);
         }
