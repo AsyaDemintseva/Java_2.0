@@ -1,6 +1,15 @@
-import
-        java.util.Scanner;
+import javax.management.InvalidAttributeValueException;
+import  java.util.Scanner;
+import  java.io.IOException;
+
 public class Base {
+
+    /**
+     * This class is used to perform arithmetic operations on two numbers
+     *
+     * @Author Asya Demintseva
+     */
+
     public static void main(String[] args)
     {
         Scanner inp = new Scanner(System.in);
@@ -11,17 +20,22 @@ public class Base {
         System.out.println("№4. Деление");
         System.out.println();
         System.out.print("Введите номер операции: ");
-        int type = inp.nextInt();
 
-        if ((type < 1)||(type > 4)) {
-            System.out.println("Не верный номер операции. Попробуйте ещё раз.");
-            System.exit(0);
-        }
+        int type = inp.nextInt();  /* remember which operation the user selected */
 
+            if ((type < 1)||(type > 4)) {
+                //check that the selected operation number exists
+                System.out.println("Не верный номер операции. Попробуйте ещё раз.");
+                System.exit(0);
+            }
+
+        //user enters two numbers
         System.out.print("Введите первое число: ");
         double a = inp.nextDouble();
         System.out.print("Введите второе число: ");
         double b = inp.nextDouble();
+
+        //start the selected operation on the two numbers entered
         switch (type) {
             case (1):
                 a = a+b;
