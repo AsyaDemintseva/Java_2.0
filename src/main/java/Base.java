@@ -1,6 +1,4 @@
-import javax.management.InvalidAttributeValueException;
 import  java.util.Scanner;
-import  java.io.IOException;
 
 public class Base {
 
