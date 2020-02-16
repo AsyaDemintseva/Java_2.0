@@ -5,7 +5,7 @@ public class Base {
     /**
      * This class is used to perform arithmetic operations on two numbers
      *
-     * @Author Asya Demintseva
+     * @author Asya Demintseva
      */
 
     public static void main(String[] args)
@@ -23,12 +23,13 @@ public class Base {
 
             if ((type < 1)||(type > 4)) {
                 //check that the selected operation number exists
-                System.out.println("Не верный номер операции. Попробуйте ещё раз.");
+                System.out.println("Неверный номер операции. Попробуйте ещё раз.");
                 System.exit(0);
             }
 
         //user enters two numbers
         System.out.print("Введите первое число: ");
+
         double a = inp.nextDouble();
         System.out.print("Введите второе число: ");
         double b = inp.nextDouble();
@@ -36,19 +37,19 @@ public class Base {
         //start the selected operation on the two numbers entered
         switch (type) {
             case (1):
-                a = a+b;
+                a = a + b;
                 System.out.printf("Результат сложения: %10.4f", a);
                 break;
             case (2):
-                a = a-b;
+                a = a - b;
                 System.out.printf("Результат вычитания: %10.4f", a);
                 break;
             case (3):
-                a = a*b;
+                a = a * b;
                 System.out.printf("Результат умножения: %10.4f", a);
                 break;
             case (4):
-                a = a/b;
+                a = a / b;
                 System.out.printf("Результат деления: %10.4f", a);
                 break;
         }
