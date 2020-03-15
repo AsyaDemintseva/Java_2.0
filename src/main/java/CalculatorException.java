@@ -38,34 +38,32 @@ public class CalculatorException {
 
                 switch (i) {
                     case (1): {
-                        double c = MathOperations.addition(a, b);
+                        double c = MathOperationsException.addition(a, b);
                         System.out.println("Результат: " + a + " + " + b + " = " + c);
                         break;
                     }
                     case (2): {
-                        double c = MathOperations.subtraction(a, b);
+                        double c = MathOperationsException.subtraction(a, b);
                         System.out.println("Результат: " + a + " - " + b + " = " + c);
                         break;
                     }
                     case (3): {
-                        double c = MathOperations.miltiplication(a, b);
+                        double c = MathOperationsException.miltiplication(a, b);
                         System.out.println("Результат: " + a + " * " + b + " = " + c);
                         break;
                     }
                     case (4): {
-                        double c = MathOperations.division(a, b);
+                        double c = MathOperationsException.division(a, b);
                         System.out.println("Результат: " + a + " / " + b + " = " + c);
                         break;
                     }
-
                     case (5): {
-                        double c = MathOperations.sqr(a);
+                        double c = MathOperationsException.sqr(a);
                         System.out.println("Результат: квадрат " + a + " = " + c);
                         break;
                     }
-
                     case (6): {
-                        double c = MathOperations.sqrt(a);
+                        double c = MathOperationsException.sqrt(a);
                         System.out.println("Результат: корень " + a + " = " + c);
                         break;
                     }
