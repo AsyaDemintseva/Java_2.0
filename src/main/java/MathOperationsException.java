@@ -14,7 +14,7 @@ public class MathOperationsException {
         return a;
     }
 
-    public static Double division(double a, double b) throws Exception{
+    public static Double division(double a, double b){
         a /= b;
         return a;
     }

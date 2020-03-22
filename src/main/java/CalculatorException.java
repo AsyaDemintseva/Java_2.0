@@ -1,14 +1,10 @@
-
-import java.awt.*;
-import java.lang.ref.Cleaner;
 import java.util.Scanner;
 
 public class CalculatorException {
 
-        public static void main(String[] args) throws Exception {
+        public static void main(String[] args) {
 
-            Scanner inp1 = new Scanner(System.in);
-            Scanner inp2 = new Scanner(System.in);
+            Scanner inpChoose = new Scanner(System.in);
 
             String choise = "Да";
             while (choise.equals("Да")) {
@@ -24,23 +20,40 @@ public class CalculatorException {
                 int i = 0;
 
                 while (i < 1 || i > 6) {
-                        try {
-                            i = inp1.nextInt();
-                            if (i < 1 || i > 6) {
-                                System.out.println("Не верный номер операции! Попробуйте ещё раз.");
-                            }
-                        } catch (Exception e) {
-                            System.out.println("Что это?");
+                    try {
+                        i = inputIntVoid();
+                        if (i < 1 || i > 6) {
+                            System.out.println("Не верный номер операции! Попробуйте ещё раз.");
                         }
+                    } catch (Exception e) {
+                        System.out.println("Это не целое число. Выберите операцию, указав её номер: ");
+                    }
                 }
 
+                boolean d = false;
+                double a = 0;
                 System.out.print("Введите число 'a': ");
-                Scanner inp3 = new Scanner(System.in);
-                double a = inp3.nextDouble();
+                while (!d) {
+                    try {
+                        a = inputDoubleVoid();
+                        d = true;
+                    } catch (Exception e) {
+                        System.out.print("Это не число. Введите число 'a': ");
+                    }
+                }
+
+                d = false;
                 double b = 0;
-                if (i < 5) {
-                    System.out.print("Введите число 'b': ");
-                    b = inp1.nextDouble();
+                while (!d) {
+                    try {
+                        if (i < 5) {
+                            System.out.print("Введите число 'b': ");
+                            b = inputDoubleVoid();
+                            d = true;
+                        }
+                    } catch (Exception e) {
+                        System.out.print("Это не число. ");
+                    }
                 }
 
                 switch (i) {
@@ -77,7 +90,20 @@ public class CalculatorException {
                 }
 
                 System.out.print("Вы хотите продолжить работу с калькулятором? Введите 'Да', если хотите. Если нет, то введите любой символ: ");
-                choise = inp2.nextLine();
+                choise = inpChoose.nextLine();
             }
+        }
+
+
+        public static int inputIntVoid (){
+            Scanner inp = new Scanner(System.in);
+            int i = inp.nextInt();
+            return i;
+        }
+
+        public static Double inputDoubleVoid (){
+            Scanner inp = new Scanner(System.in);
+            Double i = inp.nextDouble();
+            return i;
         }
 }
