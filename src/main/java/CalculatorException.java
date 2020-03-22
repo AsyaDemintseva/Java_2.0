@@ -44,15 +44,15 @@ public class CalculatorException {
 
                 d = false;
                 double b = 0;
-                while (!d) {
-                    try {
-                        if (i < 5) {
+                if (i < 5) {
+                    while (!d) {
+                        try {
                             System.out.print("Введите число 'b': ");
                             b = inputDoubleVoid();
                             d = true;
+                        } catch (Exception e) {
+                            System.out.print("Это не число. ");
                         }
-                    } catch (Exception e) {
-                        System.out.print("Это не число. ");
                     }
                 }
 
