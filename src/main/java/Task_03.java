@@ -2,7 +2,6 @@ import  java.util.Scanner;
 
 public class Task_03 {
     public static void main(String[] args) {
-        Scanner inp = new Scanner(System.in);
         System.out.println("Вы можете выполнить следующие действия:");
         System.out.println("№1. Калькулятор");
         System.out.println("№2. Поиск максимального элемента в массиве");
@@ -75,19 +74,22 @@ public class Task_03 {
         Scanner inp4 = new Scanner(System.in);
 
         int razm = inp3.nextInt();
-        String[] mas = new String[razm];
+        String[] mas = new String[razm]; //создаём массив mas, размерность которого равна переменной razm
 
         int i;
         //заполняем массив
         for (i = 0; i < razm ; i++) {
-            int a;
-            System.out.print("Введите слово №" + (a=i+1) + ": ");
+            System.out.print("Введите слово №" + (i+1) + ": ");
             mas[i] = inp4.nextLine();
         }
 
         int lng = 0; //тут будем хранить длину самого длинного слова из массива mas
         for (i = 0; i < razm; i++) {
-            if (lng < mas[i].length()) {
+            if (
+
+                    lng  <  mas[i].length()
+
+            ) {
                 lng = mas[i].length();
             }
         }
@@ -95,7 +97,7 @@ public class Task_03 {
         String[] maxlist = new String[razm];
         for (i = 0 ; i < razm ; i++ ) {
             if (mas[i].length() == lng) {
-                maxlist[i] = mas[i];
+                maxlist[i] = mas[i]; //копируем элемент массива mas, (в котором номер элемента - это "i"от 0 до 9)  в элемент массива maxlist с таким же индексом
             }
         }
         //выводим самые длинные слова в массиве

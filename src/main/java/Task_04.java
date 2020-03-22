@@ -27,13 +27,13 @@ public class Task_04 {
                 // который хранит самое большое значение из отрицательных
             }
 
-            /*else if (mas[i] > 0 && mas [i] < m) {
+            else if (mas[i] > 0 && mas [i] < m) {
                 m = mas[i];
                 k = i;
-            }*/
             }
-           System.out.println("Максимальное среди минимальных = " + mas[j]);
-        System.out.println("Минимальное среди максимальных = " + mas[k]);
+            }
+           System.out.println("Максимальное среди отрицательных = " + mas[j]);
+        System.out.println("Минимальное среди положительных = " + mas[k]);
             mas[k] = mas[j]*mas[k];
             mas[j] = mas[k]/mas[j];
             mas[k] = mas[k]/mas[j];

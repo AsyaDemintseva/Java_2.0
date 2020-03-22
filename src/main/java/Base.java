@@ -10,7 +10,7 @@ public class Base {
 
     public static void main(String[] args)
     {
-        Scanner inp = new Scanner(System.in);
+        Scanner inp = new Scanner(System.in); // inp-объект
         System.out.println("Какую операцию вы хотите провести? ");
         System.out.println("№1. Сложение");
         System.out.println("№2. Вычитание");

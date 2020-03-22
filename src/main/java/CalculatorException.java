@@ -1,4 +1,6 @@
 
+import java.awt.*;
+import java.lang.ref.Cleaner;
 import java.util.Scanner;
 
 public class CalculatorException {
@@ -20,16 +22,21 @@ public class CalculatorException {
                 System.out.println("");
                 System.out.print("Выберите операцию, указав её номер: ");
                 int i = 0;
+
                 while (i < 1 || i > 6) {
-                    i = inp1.nextInt();
-                    if (i < 1 || i > 6) {
-                        System.out.println("Не верный номер операции! Попробуйте ещё раз.");
-                    }
+                        try {
+                            i = inp1.nextInt();
+                            if (i < 1 || i > 6) {
+                                System.out.println("Не верный номер операции! Попробуйте ещё раз.");
+                            }
+                        } catch (Exception e) {
+                            System.out.println("Что это?");
+                        }
                 }
 
                 System.out.print("Введите число 'a': ");
-
-                double a = inp1.nextDouble();
+                Scanner inp3 = new Scanner(System.in);
+                double a = inp3.nextDouble();
                 double b = 0;
                 if (i < 5) {
                     System.out.print("Введите число 'b': ");
